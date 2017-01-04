@@ -1,0 +1,17 @@
+1.HOSTS配置
+127.0.0.1 www.project.cc
+127.0.0.1 admin.project.cc
+
+2.vhosts配置（DocumentRoot改成你自己放置的位置）
+<VirtualHost *:80>
+    DocumentRoot "/xampp/htdocs/project/frontend/web"
+    ServerName  www.project.cc
+    ServerAlias www.project.cc
+</VirtualHost>
+<VirtualHost *:80>     
+    DocumentRoot "/xampp/htdocs/project/backend/web"     
+    ServerName  admin.project.cc
+    ServerAlias admin.project.cc
+</VirtualHost>
+
+3.导入project.sql
